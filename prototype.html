@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Academic Consequence Engine</title>
+</head>
+<body>
+  <h2>Academic Consequence Engine</h2>
+
+  <p>Subject: Data Structures</p>
+
+  <label>Attendance (%)</label>
+  <input type="range" min="60" max="100" value="75"
+         oninput="updateRisk(this.value)">
+  <p id="attendance">75%</p>
+
+  <h3 id="risk" style="color:green;">SAFE</h3>
+
+  <p id="warning"></p>
+
+  <h3>Damage Control Suggestions</h3>
+  <ul>
+    <li>Attend all remaining classes</li>
+    <li>Score above 80% in finals</li>
+    <li>Focus on high-credit subjects</li>
+  </ul>
+
+  <script>
+    function updateRisk(value) {
+      document.getElementById("attendance").innerText = value + "%";
+      let risk = document.getElementById("risk");
+      let warning = document.getElementById("warning");
+
+      if (value < 70) {
+        risk.innerText = "POINT OF NO RETURN";
+        risk.style.color = "red";
+        warning.innerText = "Attendance cannot be recovered";
+      } else if (value < 75) {
+        risk.innerText = "DANGER";
+        risk.style.color = "orange";
+        warning.innerText = "";
+      } else {
+        risk.innerText = "SAFE";
+        risk.style.color = "green";
+        warning.innerText = "";
+      }
+    }
+  </script>
+</body>
+</html>

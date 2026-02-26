@@ -1,3 +1,7 @@
+const supabaseUrl = "https://olkaglticzxqufhetvig.supabase.co";
+const supabaseKey = "sb_publishable_fhK_CEuO1RT-9hzggGSO2A_o8UUEqtD";
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
 function enterUSN() {
   if (usn.value.trim() !== "") {
     usnBox.classList.add("hidden");

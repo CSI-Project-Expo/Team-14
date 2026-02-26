@@ -15,7 +15,6 @@ function openPredict(subject) {
   subjectName.innerText = subject;
   calculate();
 }
-
 function calculate() {
   let a = attendance.value;
   let c = cie.value;
@@ -42,7 +41,16 @@ function calculate() {
       ${msg}
     </div>
   `;
+
+  saveToSupabase(
+    usn.value,
+    subjectName.innerText,
+    a,
+    c,
+    status
+  );
 }
+
 function backToSubjects() {
   predictBox.classList.add("hidden");
   subjectsBox.classList.remove("hidden");
@@ -51,4 +59,9 @@ function backToSubjects() {
 function backToUSN() {
   subjectsBox.classList.add("hidden");
   usnBox.classList.remove("hidden");
+}
+async function saveToSupabase(usn, subject, attendance, cie, risk) {
+  await supabase.from("simulations").insert([
+    { usn, subject, attendance, cie, risk }
+  ]);
 }

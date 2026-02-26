@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Academic Consequence Engine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="box" id="usnBox">
+  <h2>Enter USN</h2>
+  <input id="usn" placeholder="Enter your USN">
+  <button onclick="enterUSN()">Enter</button>
+</div>
+
+<div class="box hidden" id="subjectsBox">
+  <h2>Select Subject</h2>
+  <div class="subjects">
+    <button onclick="openPredict('DAA')">DAA</button>
+    <button onclick="openPredict('LAA')">LAA</button>
+    <button onclick="openPredict('IWP')">IWP</button>
+    <button onclick="openPredict('DBMS')">DBMS</button>
+    <button onclick="openPredict('ISE')">ISE</button>
+    <button onclick="openPredict('IDT')">IDT</button>
+    <button onclick="openPredict('DPS')">DPS</button>
+    <button onclick="openPredict('DAL')">DAL</button>
+    <button onclick="openPredict('DVT')">DVT</button>
+    <button onclick="openPredict('EOIC')">EOIC</button>
+  </div>
+</div>
+
+<div class="box hidden" id="predictBox">
+  <h2 id="subjectName"></h2>
+
+  <label>Attendance (%)</label>
+  <input type="range" min="60" max="100" value="80" id="attendance" oninput="calculate()">
+
+  <label>CIE Marks (out of 50)</label>
+  <input type="range" min="0" max="50" value="35" id="cie" oninput="calculate()">
+
+  <div id="output"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

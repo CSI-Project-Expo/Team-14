@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  margin: 0;
+}
+
+.box {
+  background: white;
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.subjects button {
+  width: 30%;
+  margin: 6px;
+}
+
+.safe {
+  background: #dcfce7;
+  color: #166534;
+  padding: 14px;
+}
+
+.danger {
+  background: #ffedd5;
+  color: #9a3412;
+  padding: 14px;
+}
+
+.risk {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 14px;
+}

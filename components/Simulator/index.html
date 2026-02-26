@@ -15,6 +15,7 @@
 
 <div class="box hidden" id="subjectsBox">
   <h2>Select Subject</h2>
+  <button onclick="backToUSN()">⬅ Back</button>
   <div class="subjects">
     <button onclick="openPredict('DAA')">DAA</button>
     <button onclick="openPredict('LAA')">LAA</button>
@@ -31,6 +32,7 @@
 
 <div class="box hidden" id="predictBox">
   <h2 id="subjectName"></h2>
+  <button onclick="backToSubjects()">⬅ Back to Subjects</button>
 
   <label>Attendance (%)</label>
   <input type="range" min="60" max="100" value="80" id="attendance" oninput="calculate()">

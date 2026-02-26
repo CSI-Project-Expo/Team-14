@@ -1,6 +1,6 @@
-const supabaseUrl = "https://olkaglticzxqufhetvig.supabase.co";
-const supabaseKey = "sb_publishable_fhK_CEuO1RT-9hzggGSO2A_o8UUEqtD";
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+const supabaseUrl = "SUPABASE_PROJECT_URL";
+const supabaseKey = "SUPABASE_ANON_KEY";
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);;
 
 function enterUSN() {
   if (usn.value.trim() !== "") {

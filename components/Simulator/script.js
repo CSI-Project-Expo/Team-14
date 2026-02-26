@@ -39,3 +39,12 @@ function calculate() {
     </div>
   `;
 }
+function backToSubjects() {
+  predictBox.classList.add("hidden");
+  subjectsBox.classList.remove("hidden");
+}
+
+function backToUSN() {
+  subjectsBox.classList.add("hidden");
+  usnBox.classList.remove("hidden");
+}
